@@ -11,6 +11,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+This framework has some libs require : RealmSwift, Alamofire, CTLTrackingAds-SDK, CoreTelephony, AdsFramework. 
+
+Pls dont add more
+
 ## Installation
 
 CTLCorePool is available through [CocoaPods](https://cocoapods.org). To install
