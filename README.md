@@ -20,6 +20,39 @@ it, simply add the following line to your Podfile:
 pod 'CTLCorePool'
 ```
 
+## Usage
+
+### Conifg and Add Module Extend
+
+1. Create file bridging-header and add :
+
+```swift
+#import <CTLTrackingCore/CTLTrackingConfig.h>
+#import "CTLModuleManager.h"
+#import "TrackingEventFlipTopic.h"// this file is belongs Client. not necessary
+#import "AppNews.pbobjc.h" // file dc cung cap
+```
+
+2. Copy/Drag folder Module(note : tick yes for copy if need)
+
+3. Add http request for info.plist
+ 
+```swift
+<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+```
+
+### Add Example for test
+
+// the below activity for example, you can do this or not
+
+3. Copy/Drag folder CLient(note : tick yes for copy if need).
+
+4. Replace Main.storyboard and AppDelegate.swift for test.
+
 ## Author
 
 thailinh, linhcanthai@vccorp.vn

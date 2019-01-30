@@ -17,21 +17,34 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'description thoi chu co cai deo gi dau'
+                       
 
   s.homepage         = 'https://github.com/thailinh/CTLCorePool'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'thailinh' => 'linhcanthai@vccorp.vn' }
-  s.source           = { :git => 'https://github.com/thailinh/CTLCorePool.git', :tag => s.version.to_s }
+  s.source           = { :http => "https://github.com/CanThaiLinh/CTLCorePool/releases/download/0.1.0/CTLCorePool_0.1.0.zip" }
+
+  s.swift_version = '4.2'
+
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'CTLCorePool/Classes/**/*'
-  
+
+  s.frameworks          = [ "Foundation"]
+  s.library             = "z", "System", "xml2", "xml2.2", "c++"
+  s.requires_arc        = true
+  s.dependency          'RealmSwift'
+  s.dependency          'Alamofire'
+  s.dependency          'CTLTrackingAds-SDK'
+  s.platform            = :ios, '9.0'
+  s.preserve_paths      = 'CTLCorePool.framework'
+  s.public_header_files = 'CTLCorePool.framework/Headers/CTLCorePool.h'
+  s.source_files        = 'CTLCorePool.framework/Headers/CTLCorePool.h'
+  s.vendored_frameworks = 'CTLCorePool.framework'
   # s.resource_bundles = {
   #   'CTLCorePool' => ['CTLCorePool/Assets/*.png']
   # }

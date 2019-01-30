@@ -1,0 +1,11 @@
+framework module CTLCorePool {
+  umbrella header "CTLCorePool.h"
+
+  export *
+  module * { export * }
+}
+
+module CTLCorePool.Swift {
+    header "CTLCorePool-Swift.h"
+    requires objc
+}
