@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CTLCorePool_Example' do
+  pod 'CTLCorePool', :path => '../'
+
+  target 'CTLCorePool_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
